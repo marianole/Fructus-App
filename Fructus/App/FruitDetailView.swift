@@ -35,6 +35,7 @@ struct FruitDetailView: View {
                         
                         
                         //NUTRIENTS
+                        FruitNutrientsView(fruit: fruit)
                         
                         //SUBHEADLINE
                         Text("Learn more about \(fruit.title)")
@@ -58,6 +59,7 @@ struct FruitDetailView: View {
             }//:SCROLL
             .edgesIgnoringSafeArea(.top)
         }//:NAVIGATION
+        .navigationViewStyle(StackNavigationViewStyle())
     }//:body
 }
 
@@ -66,5 +68,6 @@ struct FruitDetailView: View {
 struct FruitDetailView_Previews: PreviewProvider {
     static var previews: some View {
         FruitDetailView(fruit: fruitsData[0])
+            .preferredColorScheme(.dark)
     }
 }

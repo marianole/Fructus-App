@@ -15,7 +15,7 @@ struct StartButtonView: View {
     //MARK: - BODY
     var body: some View {
         Button(action: {
-            isOnboarding = true
+            isOnboarding = false
         }, label: {
             HStack(spacing: 8) {
                 Text("Start")
